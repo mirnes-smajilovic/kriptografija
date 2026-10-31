@@ -1,1 +1,1 @@
-Repozitorij u izradi
+Softverski paket za Wolfram Mathematicu uz magistarski rad "Matematičke osnove kriptografije javnog ključa i njihova implementacija u Wolfram Mathematici" (Mirnes Smajilović). Sadrži algoritme iz teorije brojeva, testove prostosti, generisanje slučajnih brojeva, metode faktorizacije te kriptosisteme RSA, Rabin, Diffie–Hellman, ElGamal i Menezes–Vanstone.
