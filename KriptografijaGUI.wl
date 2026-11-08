@@ -867,7 +867,7 @@ tabFakt[] := DynamicModule[{n = 101000661900893, odabrane = {"Fermat", "Pollard 
     panel["Primjeri strukture broja (iste veli\[CHacek]ine, razli\[CHacek]ita struktura faktora)", Column[{
       Row[{Style["Primjer: ", Bold], RadioButtonBar[Dynamic[primjer], {"A", "B", "C"}]}],
       Dynamic[Style[primjeriStrukture[primjer]["opis"], 12]],
-      objasni["Brojevi su odabrani i provjereni funkcijama paketa. Sama bitna du\[ZHacek]ina nije dovoljna za procjenu te\[ZHacek]ine faktorizacije: broj, metode i vremensko ograni\[CHacek]enje upisuju se u gornji panel i metode se pokre\[CAcute]u s trenutnim brojem ponavljanja."],
+      objasni["Brojevi su odabrani i provjereni funkcijama paketa. Sama bitovna du\[ZHacek]ina nije dovoljna za procjenu te\[ZHacek]ine faktorizacije: broj, metode i vremensko ograni\[CHacek]enje upisuju se u gornji panel i metode se pokre\[CAcute]u s trenutnim brojem ponavljanja."],
       dugme["U\[CHacek]itaj primjer i uporedi metode",
         (podaci = primjeriStrukture[primjer];
          n = podaci["n"]; odabrane = podaci["metode"]; Bmin = podaci["Bmin"]; Bmax = podaci["Bmax"]; ogr = podaci["ogr"];
@@ -1735,13 +1735,13 @@ ktoPrava[a_List, m_List, x_Integer] := Module[{M = Times @@ m, s = Length[m], x0
 
 primjeriStrukture = <|
   "A" -> <|"n" -> 9025193040022231,
-    "opis" -> "A: dva bliska prosta faktora, p = 95000011 i q = 95002021 (razlika 2010). Pogodno za Fermatovu metodu: x = (p + q)/2 je ve\[CHacek] prva ispitana vrijednost (prvi cijeli broj iznad korijena iz n).",
+    "opis" -> "A: dva bliska prosta faktora, p = 95000011 i q = 95002021 (razlika 2010). Pogodno za Fermatovu metodu: x = (p + q)/2 je ve\[CAcute] prva ispitana vrijednost (prvi cijeli broj iznad korijena iz n).",
     "metode" -> {"Fermat", "Probno dijeljenje", "Pollard rho (Brent)", "Pollard p-1"}, "Bmin" -> 10, "Bmax" -> 2000, "ogr" -> 20|>,
   "B" -> <|"n" -> 8589960378803827,
     "opis" -> "B: jedan mali i jedan veliki prosti faktor, p = 1000003 i q = 8589934609. Pogodno za probno dijeljenje: mali faktor se nalazi poslije oko 5\[CenterDot]10^5 koraka, a Fermatova metoda treba oko 10^11 koraka.",
     "metode" -> {"Fermat", "Probno dijeljenje", "Pollard rho (Brent)", "Pollard p-1"}, "Bmin" -> 10, "Bmax" -> 2000, "ogr" -> 20|>,
   "C" -> <|"n" -> 8680515600909007,
-    "opis" -> "C: p = 43402481 s glatkim p - 1 = 2^4\[CenterDot]5\[CenterDot]11\[CenterDot]31\[CenterDot]37\[CenterDot]43 i sigurni prost broj q = 200000447 (q - 1 = 2\[CenterDot]100000223). Pogodno za Pollardovu p-1 metodu: uspjeh zavisi od faktorizacije p - 1 i granice B (ovdje B = 43), a ne od toga \[CHacek]to je faktor mali.",
+    "opis" -> "C: p = 43402481 s glatkim p - 1 = 2^4\[CenterDot]5\[CenterDot]11\[CenterDot]31\[CenterDot]37\[CenterDot]43 i sigurni prost broj q = 200000447 (q - 1 = 2\[CenterDot]100000223). Pogodno za Pollardovu p-1 metodu: uspjeh zavisi od faktorizacije p - 1 i granice B (ovdje B = 43), a ne od toga \[SHacek]to je faktor mali.",
     "metode" -> {"Fermat", "Probno dijeljenje", "Pollard rho (Brent)", "Pollard p-1"}, "Bmin" -> 10, "Bmax" -> 2000, "ogr" -> 20|>
 |>
 
@@ -1797,7 +1797,7 @@ tablicaVisekratnika[a_, b_, p_] := Module[{tacke, N0, oblik, zagl, redovi},
     Join[{oblik[P0]}, Table[oblik[VisekratnikTacke[k, P0, a, p]], {k, 2, N0}], {RedTacke[P0, a, p]}],
     {P0, tacke}];
   Column[{
-    Style["Tablica vi\[SHacek]ekratnika [k]P svih ta\[CHacek]aka krivulje", Bold, 13],
+    Style["Tabela vi\[SHacek]ekratnika [k]P svih ta\[CHacek]aka krivulje", Bold, 13],
     Grid[Prepend[redovi, zagl], Frame -> All, Alignment -> Center, Spacings -> {1.2, 0.8}]
   }, Spacings -> 1]
 ]
